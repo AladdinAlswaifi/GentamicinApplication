@@ -10,7 +10,7 @@
      
 }
 body{
-    background: rgb(139, 199, 27);
+    background: rgb(3, 32, 124);
 }
 
 h1{
@@ -35,7 +35,7 @@ h1{
     padding: 10px;
     font-size: 20px;
     font-weight: bold;
-    color: black;
+    color: rgb(17, 184, 128);
     border-radius: 10px;
 }
 button,input{
