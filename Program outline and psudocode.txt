@@ -1,0 +1,38 @@
+First page:
+	- Purpose: 
+		- Start Gentamicin >>> go to A
+		- Monitor level >>> go to B
+
+A)
+1- Check if any contraindications:
+	Yes>>>> message: Gentamicin is contraindicated
+	No>>>> Continue
+2- check if any special conditions:
+	Yes>>>> Deliver a proper message
+	No>>>> Continue
+3- User enter the data: (input)
+	- Sex: (switch button male/female)
+	- Age
+	- Body weight + choose if Kg/lb (silder)
+	- Height + cm/feet (slider)
+	- Creatinine result +umol/L - mg/dl (slider)
+	- Dialysis patient: (switch button yes/no)
+
+4- Progream does the calculations in the background: (output)
+
+	1- Determine weight to be used:
+		- Determine Ideal body weight
+		- Determine if the patient obsese
+		- Decide which weight to be used
+
+	- Creatinine clearance:
+		- Determine which weight to be used
+		- Calculate Creatinine clearance
+
+	- Dose + Frequency:
+		- Calculate the dose and frequency
+
+	- When to monitor:
+		- Tell user when to monitor next
+	
+	
