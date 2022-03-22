@@ -11,45 +11,46 @@
     <body>
         
         <script src="{% static 'script.js' %}">  </script>
+        
         <div class="container">  
             <h1>Gentamicin Calculator</h1>
-
             <div class= "dropdown">
-                <h3 id="result">Gentamicin Contraindications</h3>   
-                <select class="dropdown" id="ContraIndication"  default="None">
+                <h5>Check Gentamicin Contraindications</h5>   
+                <select class="dropdownmenu-content" id="ContraIndication">
                     <option value="None">-- None --</option>
                     <option value="hypersensitivity">Known hypersensitivity to gentamicin or its excipients</option>
-                    <option value="Myasthenia" selected>Myasthenia Gravis</option>
+                    <option value="Myasthenia" >Myasthenia Gravis</option>
                     <option value="Blind">Blind (due to risk of ototoxicity)</option>
                 </select>
             </div>
-          
-            <div class="dropdown">
-                <button class="dropbtn">Special Indications</button>
-                <div class="dropdown-content" default="None">
-                    <a href="#None">None</a>
-                    <a href="#Burns">Burns</a>
-                    <a href="#Ascites">Ascites >20% of Body weight</a>
-                    <a href="#Endocarditis">Endocarditis</a>
-                    <a href="#Cystic">Cystic Fibrosis</a>
-                    <a href="#Pregnancy">Pregnancy</a>
-                </div>
+            
+            <div class= "dropdown">
+                <h5>Special Indications</h5>   
+                <select class="dropdownmenu-content" id="Indications">
+                    <option value="None">-- None --</option>
+                    <option value="Burns">Burns</option>
+                    <option value="Ascites" >Ascites (>20% of Body weight)</option>
+                    <option value="Endocarditis">Endocarditis</option>
+                    <option value="Cystic" >Cystic Fibrosis</option>
+                    <option value="Pregnancy">Pregnancy</option>
+                </select>
             </div>
-            <div class="dropdown">
-                <button class="dropbtn">Dialysis Patient:</button>
-                <div class="dropdown-content" default="None">
-                    <a href="#Yes">Yes</a>
-                    <a href="#No">No</a>
-                </div>
+            <div class= "dropdown">
+                <h5>Is the patient on Dialysis?</h5>   
+                <select class="dropdownmenu-content" id="Dialysis">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
             </div>
             <br>
-            <div class="dropdown">
-                <button class="dropbtn">Sex</button>
-                <div class="dropdown-content" default="None">
-                    <a href="#Male">Male</a>
-                    <a href="#Female">Female</a>
-                </div>
+            <div class= "dropdown">
+                <h5>Sex</h5>   
+                <select class="dropdownmenu-content" id="Sex">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
             </div>
+
             <label>
                 <input id="A-input" type="number" placeholder="Enter age: ">
             </label>
@@ -63,7 +64,7 @@
                 <input id="C-input" type="number" placeholder="Enter Creatinine result in umol/l: ">
             </label>
             <br>           
-            <button type="submit" onclick="Calculate()">Calculate Gentamicin dose</button>
+            <button type="button" onclick="Calculate()">Calculate Gentamicin dose</button>
             <br><br><br>
             
             <div class="bmi-value">
@@ -71,7 +72,6 @@
                 <div id="bmi-output"></div>
             </div>
             <div class="status">
-                <h4>Frequency </h4>
                 <div id="bmi-status"></div>
             </div>   
         </div>
