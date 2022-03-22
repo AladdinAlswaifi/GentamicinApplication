@@ -1,6 +1,23 @@
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function ContraIndication() {
+    
+    var C_indication = document.getElementById("dropdown-content").value;
+    if (C_indication = "None"){
+        document.getElementById("bmi-status").innerHTML = "None";
+    }
+}
+  
+
+
+
+
 function Calculate(){
     var height = document.getElementById("h-input").value;
     var weight = document.getElementById("w-input").value;
+    var Age = document.getElementById("A-input").value;
+    var Creatinine = document.getElementById("C-input").value;
+
 
     var result = parseFloat(weight) /(parseFloat(height)/100)**2;
 

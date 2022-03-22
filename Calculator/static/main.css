@@ -17,6 +17,10 @@ h1{
     text-align: center;
     color: white;
 }
+h3{
+    text-align: left;
+    color: rgb(233, 179, 33);
+}
 .submit-btn{
     background-color: turquoise;
 }
@@ -83,6 +87,8 @@ color: white;
 .dropdown {
     position: relative;
     display: inline-block;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
 }
 
 /* Dropdown Content (Hidden by Default) */

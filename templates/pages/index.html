@@ -13,39 +13,41 @@
         <script src="{% static 'script.js' %}">  </script>
         <div class="container">  
             <h1>Gentamicin Calculator</h1>
-            <div class="dropdown">
-                <button class="dropbtn">Check Contraindications</button>
-                <div class="dropdown-content" default="None">
-                    <a href="#">None</a>
-                    <a href="#">Known hypersensitivity to gentamicin or its excipients</a>
-                    <a href="#">Myasthenia Gravis</a>
-                    <a href="#">Blind (due to risk of ototoxicity) </a>
-                </div>
+
+            <div class= "dropdown">
+                <h3 id="result">Gentamicin Contraindications</h3>   
+                <select class="dropdown" id="ContraIndication"  default="None">
+                    <option value="None">-- None --</option>
+                    <option value="hypersensitivity">Known hypersensitivity to gentamicin or its excipients</option>
+                    <option value="Myasthenia" selected>Myasthenia Gravis</option>
+                    <option value="Blind">Blind (due to risk of ototoxicity)</option>
+                </select>
             </div>
+          
             <div class="dropdown">
                 <button class="dropbtn">Special Indications</button>
                 <div class="dropdown-content" default="None">
-                    <a href="#">None</a>
-                    <a href="#">Burns</a>
-                    <a href="#">Ascites >20% of Body weight</a>
-                    <a href="#">Endocarditis</a>
-                    <a href="#">Cystic Fibrosis</a>
-                    <a href="#">Pregnancy</a>
+                    <a href="#None">None</a>
+                    <a href="#Burns">Burns</a>
+                    <a href="#Ascites">Ascites >20% of Body weight</a>
+                    <a href="#Endocarditis">Endocarditis</a>
+                    <a href="#Cystic">Cystic Fibrosis</a>
+                    <a href="#Pregnancy">Pregnancy</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Dialysis Patient:</button>
                 <div class="dropdown-content" default="None">
-                    <a href="#">Yes</a>
-                    <a href="#">No</a>
+                    <a href="#Yes">Yes</a>
+                    <a href="#No">No</a>
                 </div>
             </div>
             <br>
             <div class="dropdown">
                 <button class="dropbtn">Sex</button>
                 <div class="dropdown-content" default="None">
-                    <a href="#">Male</a>
-                    <a href="#">Female</a>
+                    <a href="#Male">Male</a>
+                    <a href="#Female">Female</a>
                 </div>
             </div>
             <label>
