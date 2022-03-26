@@ -1,4 +1,13 @@
 *{margin: 0; padding: 0;font-family: 'Old Standard TT', serif;}
+
+#Special-indications{
+    visibility: hidden;
+}
+
+#Warning{
+    visibility: hidden;
+}
+
 .container{
      display: grid;
      justify-content: center;
@@ -18,10 +27,23 @@ h1{
     color: white;
 }
 
+label{
+    background-color: yellow;
+    min-width: 100%px;
+    padding: 4px;
+    font-size: 15px;
+    border-radius: 8px;
+    font-style:italic;
+}
+
+placeholder{
+    width: 100%;
+}
+
 .submit-btn{
     background-color: turquoise;
 }
-.bmi-value{
+.Gentamicin-dose{
     background-color: yellow;
     display: grid;
     grid-template-rows: 50% 50%;
@@ -41,7 +63,7 @@ h1{
     border-radius: 10px;
 }
 button,input{
-    min-width: 100%;
+    min-width: 70%;
     min-height: 100%;
     border: none;
     outline: none;
@@ -51,6 +73,7 @@ button,input{
 input{
     background: #ffdd99;
     text-indent: 0.5em;
+    width: 100%;
     max-width:100% ;
     color: black;
     outline: none;
@@ -66,10 +89,15 @@ input[type=number] {
 button{
     background: tomato;
     cursor: pointer;
+    width: fit-content;
+    height: max-content;
+    min-height: 100%;
 }
 button:hover{
-background: #c70039;
-color: white;
+    background: #c70039;
+    color: white;
+    min-width: 70%;
+    min-height: 100%;
 }
 
 /* Dropdown Button */
@@ -132,3 +160,27 @@ color: white;
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+  }
+
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .closebtn:hover {
+    color: black;
+  }
+

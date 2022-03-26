@@ -14,7 +14,7 @@
         
         <div class="container">  
             <h1>Gentamicin Calculator</h1>
-            <div class= "dropdown">
+            <div class= "dropdown" id="contraindications">
                 <h5>Check Gentamicin Contraindications</h5>   
                 <select class="dropdownmenu-content" id="ContraIndication">
                     <option value="None">-- None --</option>
@@ -22,9 +22,21 @@
                     <option value="Myasthenia" >Myasthenia Gravis</option>
                     <option value="Blind">Blind (due to risk of ototoxicity)</option>
                 </select>
+                
+                <div>
+                <br>
+                <br>
+                <button type="button" onclick="ShowIndications()">Confirm </button>
+                <br>
+                <div class="alert" id="Warning">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    Warning!! Gentamicin is contraindicated !!
+                </div>    
+                </div>
             </div>
-            
-            <div class= "dropdown">
+            <br>
+
+            <div class= "dropdown" id="Special-indications">
                 <h5>Special Indications</h5>   
                 <select class="dropdownmenu-content" id="Indications">
                     <option value="None">-- None --</option>
@@ -34,47 +46,54 @@
                     <option value="Cystic" >Cystic Fibrosis</option>
                     <option value="Pregnancy">Pregnancy</option>
                 </select>
+                <br>
+                <br>
+                <div>
+                <button type="button" onclick="ShowIndications()">Confirm </button>
+                </div>
             </div>
-            <div class= "dropdown">
+            <br>
+            <br>
+
+            <div class= "dropdown" id="Dialysis">
                 <h5>Is the patient on Dialysis?</h5>   
                 <select class="dropdownmenu-content" id="Dialysis">
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                 </select>
+                <br>
+                <br>
+                <div>
+                <button type="button" onclick="ShowIndications()">Confirm </button>
+                </div>
             </div>
-            <br>
-            <div class= "dropdown">
-                <h5>Sex</h5>   
-                <select class="dropdownmenu-content" id="Sex">
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                </select>
-            </div>
-
-            <label>
-                <input id="A-input" type="number" placeholder="Enter age: ">
-            </label>
-            <label>
-                <input id="h-input" type="number" placeholder="Enter Height in Centimeters: ">
-            </label>        
-            <label>
-                <input id="w-input" type="number" placeholder="Enter Weight in Kilogrames: ">
-            </label> 
-            <label>
-                <input id="C-input" type="number" placeholder="Enter Creatinine result in umol/l: ">
-            </label>
-            <br>           
-            <button type="button" onclick="Calculate()">Calculate Gentamicin dose</button>
-            <br><br><br>
             
-            <div class="bmi-value">
+            <div class="container" id="main">
+                <div class= "dropdown">
+                    <h5>Sex</h5>   
+                    <select class="dropdownmenu-content" id="Sex">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+
+                <label>
+                    <input id="A-input" type="number" placeholder="Enter age: ">
+                </label>
+                <label>
+                    <input id="h-input" type="number" placeholder="Enter Height in Centimeters: ">
+                </label>        
+                <label>
+                    <input id="w-input" type="number" placeholder="Enter Weight in Kilogrames: ">
+                </label> 
+                <label>
+                    <input id="C-input" type="number" placeholder="Enter Creatinine result in umol/l: ">
+                </label>        
+                <button type="button" onclick="Calculate()">Calculate Gentamicin dose</button>
+                <br>
+            <div class="Gentamicin-dose" id="bmi-output">
                 <h4>Gentamicin dose: </h4>
-                <div id="bmi-output"></div>
-            </div>
-            <div class="status">
-                <div id="bmi-status"></div>
-            </div>   
+            </div> 
         </div>
-        <br>
     </body> 
 </html>
